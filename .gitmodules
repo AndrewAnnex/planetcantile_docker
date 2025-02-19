@@ -1,0 +1,3 @@
+[submodule "planetcantile"]
+	path = planetcantile
+	url = https://github.com/AndrewAnnex/planetcantile.git
