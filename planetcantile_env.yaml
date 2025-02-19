@@ -1,0 +1,17 @@
+name: base
+channels:
+- conda-forge
+dependencies:
+- python=3.13
+- rasterio=1.4.3
+- morecantile>=6.1.0
+- supermorecado
+- rio-tiler
+- httpx
+- fastapi
+- uvicorn
+- pydantic
+- geojson-pydantic
+- pip
+- pip:
+  - titiler.application==0.20.1 
