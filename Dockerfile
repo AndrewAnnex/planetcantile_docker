@@ -1,8 +1,6 @@
 # Use the official micromamba image as the base
 FROM mambaorg/micromamba:2.0.5
 
-# copy the .env file OTOD
-COPY --chown=$MAMBA_USER:$MAMBA_USER .env /home/mambauser/.env
 # copy in the environment yaml file
 COPY --chown=$MAMBA_USER:$MAMBA_USER planetcantile_env.yaml /tmp/env.yaml
 # copy the planetcantile data into the container
@@ -17,6 +15,8 @@ ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
 # set environment variables
 ENV TILEMATRIXSET_DIRECTORY=/planetcantile_data \
+    TITILER_API_name="Planetcantile TiTiler" \
+    TITILER_API_root_path="/titiler/" \
     GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES \
     GDAL_DISABLE_READDIR_ON_OPEN=EMPTY_DIR \ 
     GDAL_INGESTED_BYTES_AT_OPEN=32768 \
