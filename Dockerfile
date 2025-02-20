@@ -1,10 +1,12 @@
 # Use the official micromamba image as the base
 FROM mambaorg/micromamba:2.0.5
 
+# copy the .env file OTOD
+COPY --chown=$MAMBA_USER:$MAMBA_USER .env /home/mambauser/.env
 # copy in the environment yaml file
 COPY --chown=$MAMBA_USER:$MAMBA_USER planetcantile_env.yaml /tmp/env.yaml
 # copy the planetcantile data into the container
-COPY planetcantile/src/planetcantile/data/v4/ /planetcantile_data
+COPY --chown=$MAMBA_USER:$MAMBA_USER planetcantile/src/planetcantile/data/v4/ /planetcantile_data
 
 # Create a the base environment
 RUN micromamba install -y -n base -f /tmp/env.yaml && \
