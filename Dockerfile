@@ -32,4 +32,4 @@ ENV TILEMATRIXSET_DIRECTORY=/planetcantile_data \
     HOST=0.0.0.0 \
     PORT=80
 
-ENTRYPOINT ["uvicorn", "titiler.application.main:app", "--host", "0.0.0.0", "--port",  "80"]
+ENTRYPOINT ["/usr/local/bin/_entrypoint.sh", "uvicorn", "titiler.application.main:app", "--host", "0.0.0.0", "--port",  "80"]
