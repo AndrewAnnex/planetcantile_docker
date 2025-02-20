@@ -3,6 +3,7 @@ channels:
 - conda-forge
 dependencies:
 - python=3.13
+- gcc
 - rasterio=1.4.3
 - morecantile>=6.1.0
 - supermorecado
