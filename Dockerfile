@@ -15,8 +15,8 @@ ARG MAMBA_DOCKERFILE_ACTIVATE=1
 
 # set environment variables
 ENV TILEMATRIXSET_DIRECTORY=/planetcantile_data \
-    TITILER_API_name="Planetcantile TiTiler" \
-    TITILER_API_root_path="/titiler/" \
+    TITILER_API_NAME="Planetcantile TiTiler" \
+    TITILER_API_ROOT_PATH="/titiler/" \
     GDAL_HTTP_MERGE_CONSECUTIVE_RANGES=YES \
     GDAL_DISABLE_READDIR_ON_OPEN=EMPTY_DIR \ 
     GDAL_INGESTED_BYTES_AT_OPEN=32768 \
